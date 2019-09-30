@@ -11,7 +11,7 @@
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 2px;
-    background-color: white;
+    background-color: black;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -23,7 +23,7 @@
 .bar1.change {
     display: inline-block;
     transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
-    -webkit-transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
+    -webkit-transform: rotate(45deg) translate3d(5.285px, 10px, 0);
 }
 
 .bar2.change {
@@ -34,7 +34,7 @@
     top: 10px;
     display: inline-block;
     -webkit-transform: rotate(-45deg) translate3d(17px, -18px, 0);
-    transform: rotate(-45deg) translate3d(17px, -18px, 0);
+    transform: rotate(-45deg) translate3d(13px, -18px, 0);
 }
 
 .nav-list {
@@ -43,11 +43,17 @@
     width: 35%;
     height: 75%;
     position: fixed;
-    background-color: black;
-    opacity: .4;
-    align-items: center;
+    background-color: white;
+    opacity: .8;
+    align-items: flex-start;
     justify-content: center;
     visibility: hidden;
+    left: -250px;
+}
+
+.nav-list img {
+    height: 50px;
+    width: 50px;
 }
 
 .nav-list a {
@@ -63,8 +69,15 @@
     padding: 20px;
 }
 
+.nav-list ul {
+    padding: 0;
+}
+
 .hidden {
     visibility: visible;
+    transform: translateX(250px);
+    transition: .5s transform ease-in-out;
+        /* transition-timing-function: cubic-bezier(.38,.52,.37,1.27); */
 }
 
 /* Main section */
@@ -77,7 +90,7 @@
 
 .adventures-image {
     min-width: 50%;
-    background-image: url('../assets/img/lake.jpg');
+    background-image: url('../img/lake.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,49 +112,148 @@
     justify-content: space-between;
 }
 
+@media only screen and (min-width: 768px) {
+    .adventures-mobile-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .adventures-container, .mission-main {
+        display: none;
+    }
+
+
+    .adventures-image-mobile {
+        width: 100vw;
+        height: 40%;
+        background-image: url('../img/planting.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .adventures-container-mobile {
+        display: flex;
+        flex-flow: row;
+        height: 70vh;
+        width: 100vw;
+    }
+    .adventures-text-container-mobile {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .adventures-text-mobile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .adventures-text-mobile > h1 {
+        margin-bottom: 50px;
+    }
+
+    .adventures-text-mobile > p {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    .adventures-main-mobile {
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .text-container-mobile {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50vw;
+        margin: 20px 30px;
+    }
+}
+
 /* Blog section */
 
 #blog {
-    margin: 150px 0;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
 }
 
-.blog-container  {
+
+.blog-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.blog-header-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 50px 0;
 }
 
 .blog-card {
-    height: 150px;
-    width: 40vw;
-    border: 1px black solid;
     display: flex;
-    flex-flow: row wrap;
-    margin: 20px 0;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 300px;
+    margin: 20px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 3ms;
 }
 
 .card-image {
-    background: url('/wp-content/themes/wanderdicks/assets/img/trecking1.jpg') no-repeat center center; 
+    background: url(/assets/img/trecking1.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100%;
-    width: 150px;
+    width: 100%;
+    height: 60%;
 }
 
 .card-text {
-    width: 60%;
     font-size: 0.8em;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 5px;
 }
 
 .blog-button {
     display: flex;
-    flex-flow: column wrap;    
+    flex-flow: column wrap;
+}
+
+@media only screen and (min-width: 768px) {
+    .blog-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .blog-card {
+        display: flex;
+        flex-flow: column wrap;
+        width: 33%;
+        height: 300px;
+        margin: 20px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* Footer */
@@ -153,6 +265,22 @@
     justify-content: center;
     align-items: center;
     border-top: solid black 1px;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-flow: column;
+    width: 35%;
+    height: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav-list a {
+    list-style: none;
+    height: 50%;
+    text-decoration: none;
+    color: black;
 }
 
 .column-1, .column-2 {

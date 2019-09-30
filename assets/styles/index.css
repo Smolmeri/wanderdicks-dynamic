@@ -23,7 +23,7 @@
 .bar1.change {
     display: inline-block;
     transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
-    -webkit-transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
+    -webkit-transform: rotate(45deg) translate3d(5.285px, 10px, 0);
 }
 
 .bar2.change {
@@ -34,7 +34,7 @@
     top: 10px;
     display: inline-block;
     -webkit-transform: rotate(-45deg) translate3d(17px, -18px, 0);
-    transform: rotate(-45deg) translate3d(17px, -18px, 0);
+    transform: rotate(-45deg) translate3d(13px, -18px, 0);
 }
 
 .nav-list {
@@ -44,10 +44,16 @@
     height: 75%;
     position: fixed;
     background-color: black;
-    opacity: .4;
-    align-items: center;
+    opacity: .8;
+    align-items: flex-start;
     justify-content: center;
     visibility: hidden;
+    left: -250px;
+}
+
+.nav-list img {
+    height: 50px;
+    width: 50px;
 }
 
 .nav-list a {
@@ -63,8 +69,15 @@
     padding: 20px;
 }
 
+.nav-list ul {
+    padding: 0;
+}
+
 .hidden {
     visibility: visible;
+    transform: translateX(250px);
+    transition: .5s transform ease-in-out;
+        /* transition-timing-function: cubic-bezier(.38,.52,.37,1.27); */
 }
 
 /* Hero section */
@@ -76,18 +89,13 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: url('/wp-content/themes/wanderdicks/assets/img/hero-2.jpg') no-repeat center center;
+    background: url(/assets/img/hero-2.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: white;
 }
-
-/* .overlay {
-    width: 100%;
-    height: 100%;
-    background-image: (rgba(0,0,0,1), rgba(0,0,2,1));
-} */
 
 .hero-container>img {
     width: 200px;
@@ -97,8 +105,29 @@
 @media only screen and (min-width: 768px) {
     .hero-container>img {
         width: 500px;
-        height: 600px;
+        height: 500px;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-container {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+}
+
+/* Info section */
+
+#info {
+    padding: 10px 50px;
+}
+.info-container {
+    margin: 50px 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Blog section */
@@ -108,6 +137,7 @@
     height: 100%;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
 }
 
 
@@ -127,12 +157,10 @@
 .blog-card {
     display: flex;
     flex-flow: column wrap;
-    /* width: 100%;
-    height: auto; */
+    width: 100%;
+    height: 300px;
     margin: 20px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: none;
-
 }
 
 .blog-card:hover {
@@ -142,8 +170,13 @@
 }
 
 .card-image {
+    /* background: url(/assets/img/trecking1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
     width: 100%;
-    height: 30%;
+    height: 60%;
 }
 
 .card-text {
@@ -152,8 +185,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px 20px;
-    width: 50%;
+    padding: 5px;
 }
 
 .blog-button {
@@ -171,7 +203,7 @@
         display: flex;
         flex-flow: column wrap;
         width: 33%;
-        height: auto;
+        height: 300px;
         margin: 20px 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -186,20 +218,16 @@
     width: 100vw;
     padding: 0;
     margin: 0;
+    border-top: 1px solid rgba(0, 0, 0, .2);
 }
 
 .mission-image {
-    /* background: url('/wp-content/themes/wanderdicks/assets/img/forest-2.jpg') no-repeat center center; */
+    background: url(/assets/img/forest-mission.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 50vw;
-    height: 100%;
-}
-
-.mission-image > img {
-    width: 100%;
     height: 100%;
 }
 
@@ -222,7 +250,7 @@
     }
     .mission-text {
         width: 100vh;
-        background: url('/wp-content/themes/wanderdicks/assets/img/forest-mission.jpg') no-repeat center center;
+        background: url(/assets/img/forest-mission.jpg) no-repeat center center;
         background-size: cover;
         color: white;
         padding: 0 10px;
@@ -230,18 +258,11 @@
         flex-flow: column;
         align-items: center;
         justify-content: center;
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0, .4);
     }
-    .filter {
-        width: 100vh;
-        color: white;
-        padding: 0 10px;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, .4);
-        z-index: 99;
-    }
+
+    
+    
 }
 
 /* About us section */
@@ -257,13 +278,14 @@
 }
 
 .about-image {
-    background: url('/wp-content/themes/wanderdicks/assets/img/sunset.jpg') no-repeat center center;
+    background: url(/assets/img/sunset.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 50vw;
     height: 100%;
+
 }
 
 .about-text {
@@ -280,6 +302,8 @@
         display: none;
     }
     .about-text {
+        /* background: url('../img/sunset.jpg') no-repeat center center; */
+        background-size: cover;
         width: 100vw;
         display: flex;
         flex-flow: column wrap;
@@ -287,7 +311,11 @@
         align-items: center;
         text-align: center;
         padding: 0 15px;
+        color: black;
+        /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, .4); */
     }
+
+   
 }
 
 /* Footer */
@@ -304,6 +332,23 @@
 .column-1, .column-2 {
     margin: 0 100px;
 }
+
+.footer-nav-list {
+    display: flex;
+    flex-flow: column;
+    width: 35%;
+    height: 75%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav-list a {
+    list-style: none;
+    height: 50%;
+    text-decoration: none;
+    color: black;
+}
+
 
 /* Miscelanious */
 
@@ -353,4 +398,8 @@ a {
 .narrow-paragraph {
     font-size: 1em;
     margin: 16px 25% 50px 25%;
+}
+
+.overlay {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0, .1);
 }

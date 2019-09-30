@@ -31,6 +31,24 @@
         <div class="bar3"></div>
     </div>
 
+    <div class="nav-list">
+            <img src="./assets/img/tempLogo.png" alt="asd">
+        <ul>
+            <a href="./index.html">
+                <li>Home</li>
+            </a>
+            <a href="./mission.html">
+                <li>Mission</li>
+            </a>
+            <a href="./adventures.html">
+                <li>Blog</li>
+            </a>
+            <a href="./team.html">
+                <li>Meet the Team</li>
+            </a>
+        </ul>
+    </div>
+
 	<?php
 		wp_nav_menu( array(
 			'theme_location' => 'primary',
