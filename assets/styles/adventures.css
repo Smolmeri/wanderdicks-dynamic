@@ -1,0 +1,198 @@
+/* Navigation */
+
+.nav-container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99999;
+    margin: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar2 {
+    width: 25px;
+}
+
+.bar1.change {
+    display: inline-block;
+    transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
+    -webkit-transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
+}
+
+.bar2.change {
+    opacity: 0;
+}
+
+.bar3.change {
+    top: 10px;
+    display: inline-block;
+    -webkit-transform: rotate(-45deg) translate3d(17px, -18px, 0);
+    transform: rotate(-45deg) translate3d(17px, -18px, 0);
+}
+
+.nav-list {
+    display: flex;
+    flex-flow: column;
+    width: 35%;
+    height: 75%;
+    position: fixed;
+    background-color: black;
+    opacity: .4;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.nav-list a {
+    color: white;
+    opacity: 1;
+    list-style: none;
+    height: 50%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-list li {
+    padding: 20px;
+}
+
+.hidden {
+    visibility: visible;
+}
+
+/* Main section */
+
+.adventures-container {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+}
+
+.adventures-image {
+    min-width: 50%;
+    background-image: url('../assets/img/lake.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.adventures-text-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.adventures-text {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+/* Blog section */
+
+#blog {
+    margin: 150px 0;
+}
+
+.blog-container  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.blog-card {
+    height: 150px;
+    width: 40vw;
+    border: 1px black solid;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px 0;
+}
+
+.card-image {
+    background: url('/wp-content/themes/wanderdicks/assets/img/trecking1.jpg') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 150px;
+}
+
+.card-text {
+    width: 60%;
+    font-size: 0.8em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-button {
+    display: flex;
+    flex-flow: column wrap;    
+}
+
+/* Footer */
+
+.footer-container {
+    height: 33vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-top: solid black 1px;
+}
+
+.column-1, .column-2 {
+    margin: 0 100px;
+}
+
+/* Miscelanious */
+
+html {
+    max-width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.s-button {
+    border: 1px black solid;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    width: 72px;
+    height: 56px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    float: right;
+}
+
+.big-header {
+    font-size: 3em;
+}
+
+.medium-header {
+    font-size: 2em;
+}
+
+.small-header {
+    font-size: 1.5em;
+}

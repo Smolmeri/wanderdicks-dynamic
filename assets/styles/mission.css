@@ -1,0 +1,244 @@
+/* Navigation */
+
+.nav-container {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 99999;
+    margin: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar2 {
+    width: 25px;
+}
+
+.bar1.change {
+    display: inline-block;
+    transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
+    -webkit-transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
+}
+
+.bar2.change {
+    opacity: 0;
+}
+
+.bar3.change {
+    top: 10px;
+    display: inline-block;
+    -webkit-transform: rotate(-45deg) translate3d(17px, -18px, 0);
+    transform: rotate(-45deg) translate3d(17px, -18px, 0);
+}
+
+.nav-list {
+    display: flex;
+    flex-flow: column;
+    width: 35%;
+    height: 75%;
+    position: fixed;
+    background-color: black;
+    opacity: .4;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.nav-list a {
+    color: white;
+    opacity: 1;
+    list-style: none;
+    height: 50%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-list li {
+    padding: 20px;
+}
+
+.hidden {
+    visibility: visible;
+}
+
+/* Main section */
+
+.mission-container {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+}
+
+.mission-image {
+    min-width: 50%;
+    background-image: url('../assets/img/planting.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mission-text-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.mission-text {
+    /* width: 50%;
+    height: 50%; */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.mission-text > p {
+    text-align: left;
+}
+
+.mission-container-mobile, .mission-main-mobile {
+    display: none;
+}
+
+.mission-main {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.text-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50vw;
+    margin: 20px 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .mission-container, .mission-main {
+        display: none;
+    }
+
+
+    .mission-image-mobile {
+        width: 100vw;
+        height: 25%;
+        background-image: url('../assets/img/planting.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mission-container-mobile {
+        display: flex;
+        flex-flow: row;
+        height: 100vh;
+        width: 100vw;
+    }
+    .mission-text-container-mobile {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mission-text-mobile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mission-text-mobile > h1 {
+        margin-bottom: 50px;
+    }
+
+    .mission-text-mobile > p {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    .mission-main-mobile {
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    
+    .text-container-mobile {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50vw;
+        margin: 20px 30px;
+    }
+
+    .image-container-mobile {
+        /* width: 50%; */
+    }
+}
+
+/* Footer */
+
+.footer-container {
+    height: 33vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-top: solid black 1px;
+}
+
+.column-1, .column-2 {
+    margin: 0 100px;
+}
+
+/* Miscelanious */
+
+html {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.s-button {
+    border: 1px black solid;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    width: 72px;
+    height: 56px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.big-header {
+    font-size: 3em;
+}
+
+.medium-header {
+    font-size: 2em;
+}
+
+.small-header {
+    font-size: 1.5em;
+}
