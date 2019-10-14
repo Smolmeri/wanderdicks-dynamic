@@ -14,11 +14,28 @@
 <?php wp_footer(); ?>
 
 <!-- Footer -->
-<div class="footer-container">
+ <div class="footer-container">
         <div class="column-1">
             <p>Wanderdics</p>
             <p>email@address.com</p>
         </div>
+        <div class="footer-nav-list">
+            <ul>
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./mission.html">
+                    <li>Mission</li>
+                </a>
+                <a href="./adventures.html">
+                    <li>Blog</li>
+                </a>
+                <a href="./team.html">
+                    <li>About Us</li>
+                </a>
+            </ul>
+        </div>
+    
         <div class="column-2">
             <p>Design & development: <br>
             <a href="www.github.com/Smolmeri">
@@ -27,6 +44,7 @@
         </p>
         </div>
     </div>
+
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/index.js"></script>
 

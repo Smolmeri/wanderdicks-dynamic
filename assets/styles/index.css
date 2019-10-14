@@ -11,7 +11,7 @@
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 2px;
-    background-color: black;
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -84,12 +84,12 @@
 
 .hero-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-flow: column wrap;
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: url(/assets/img/hero-2.jpg) no-repeat center center;
+    background: url(/assets/styles/img/hero-2.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -134,7 +134,7 @@
 
 #blog {
     margin: 50px 0;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -144,7 +144,7 @@
 .blog-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .blog-header-container {
@@ -156,10 +156,10 @@
 
 .blog-card {
     display: flex;
-    flex-flow: column wrap;
-    width: 100%;
-    height: 300px;
-    margin: 20px 20px;
+    flex-flow: column ;
+    width: 33%;
+    height: 100%;
+    margin: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -170,13 +170,11 @@
 }
 
 .card-image {
-    /* background: url(/assets/img/trecking1.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 60%;
+    height: 50%;
 }
 
 .card-text {
@@ -185,7 +183,7 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 5px;
+    padding: 10px;
 }
 
 .blog-button {
@@ -193,7 +191,7 @@
     flex-flow: column wrap;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .blog-container {
         display: flex;
         flex-flow: row wrap;
@@ -201,10 +199,10 @@
     }
     .blog-card {
         display: flex;
-        flex-flow: column wrap;
-        width: 33%;
-        height: 300px;
-        margin: 20px 20px;
+        flex-flow: column;
+        width: 100%;
+        height: 70%;
+        /* margin: 20px 20px; */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 }
@@ -321,7 +319,7 @@
 /* Footer */
 
 .footer-container {
-    height: 33vh;
+    /* height: 33vh; */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -356,6 +354,7 @@ html {
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -381,6 +380,7 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 .big-header {
