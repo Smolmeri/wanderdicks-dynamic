@@ -74,9 +74,9 @@ get_header();
 <section id="blog">
     <h1 class="big-header blog-header-container"><?php echo $blog_header; ?></h1>
     <div class="blog-container">
-        <?php $loop = new WP_Query(array('post_type' => 'blog_posts', 'orderby' => 'post_id', 'order' => 'DESC')); ?>
+        <?php $loop = new WP_Query(array('posts_per_page' => 4, 'post_type' => 'blog_posts', 'orderby' => 'post_id', 'order' => 'DESC')); ?>
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-            <div class="blog-card">
+            <a class="blog-card" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
                 <!-- <div class="card-image"></div> -->
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>
                 <div class="card-image" style="background-image: url(<?php echo $url ?>"></div>
@@ -86,7 +86,7 @@ get_header();
                     <p><?php the_excerpt(); ?></p>
                     <span><?php the_author(); ?></span>
                 </div>
-            </div>
+            </a>
         <?php endwhile; ?>
     </div>
     <button class="s-button">Test</button>
