@@ -51,7 +51,7 @@ get_header();
             <h1 class="big-header"><?php echo $mission_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $mission_paragraph; ?></p>
 
-            <a href="/mission.html"><button class="s-button" style="border: 1px white solid; color: white;">Read More</button></a>
+            <a href="projects"><button class="s-button" style="border: 1px white solid; color: white;">Read More</button></a>
         </div>
     </div>
 </section>
@@ -64,8 +64,7 @@ get_header();
         <div class="about-text">
             <h1 class="big-header"><?php echo $team_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $team_paragraph; ?></p>
-
-            <a href="team.html"><button class="s-button">>></button></a>
+            <a href="team"><button class="s-button">>></button></a>
         </div>
     </div>
 </section>

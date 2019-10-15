@@ -18,6 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/index.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/single.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/mission.css">
 	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 	<?php wp_head(); ?>
@@ -36,16 +37,16 @@
     <div class="nav-list">
             <img src="./assets/img/tempLogo.png" alt="asd">
         <ul>
-            <a href="./index.html">
+            <a href="home">
                 <li>Home</li>
             </a>
-            <a href="./mission.html">
+            <a href="projects">
                 <li>Mission</li>
             </a>
             <a href="blog">
                 <li>Adventures</li>
             </a>
-            <a href="./team.html">
+            <a href="team">
                 <li>Meet the Team</li>
             </a>
         </ul>
