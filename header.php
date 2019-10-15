@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/index.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/single.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/mission.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/team.css">
 	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
 	<?php wp_head(); ?>

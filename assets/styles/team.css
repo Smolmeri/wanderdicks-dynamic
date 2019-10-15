@@ -81,7 +81,7 @@
 }
 /* Hero section */
 
-.container {
+.container-team {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -90,19 +90,19 @@
    
 }
 
-.hero-image {
-    background: url('../img/three.jpg') no-repeat center center;
+.team-hero-image {
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 75%;
 }
 
-.hero-container {
+.team-hero-container {
     display: flex;
     flex-flow: column wrap;
-    margin: 100px 0;
+    /* margin: 100px 0; */
     height: 50vh;
+    justify-content: flex-start;
 }
 
 /* Team member cards */
@@ -112,6 +112,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    height: 100vh;
 }
 
 .card {
@@ -119,6 +120,7 @@
     transition: 0.3s;
     margin: 10px 20px;
     width: 25%;
+    height: 40%;
 }
 
 /* .card:hover {
