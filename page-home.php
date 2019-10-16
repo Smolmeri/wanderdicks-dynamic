@@ -41,14 +41,21 @@ get_header();
 
 <!-- Mission section -->
 <section id="mission">
-    <div class="mission-container">
+    <div class="projects-container">
 
-        <div class="mission-image" style="background-image: url(<?php echo $project_image[url] ?>)"></div>
-        <div class="mission-text">
+        <div class="projects-image" style="background-image: url(<?php echo $project_image[url] ?>)"></div>
+        <div class="projects-text">
             <h1 class="big-header"><?php echo $project_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
 
-            <a href="projects"><button class="s-button" style="border: 1px white solid; color: white;">Read More</button></a>
+            <a id="projects-btn" class="s-button" href="projects">Read More</a>
+        </div>
+
+        <div style="background-image: url(<?php echo $project_image[url] ?>)" class="projects-text-mobile">
+            <h1 class="big-header"><?php echo $project_header; ?></h1>
+            <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
+
+            <a id="projects-btn"class="s-button" href="projects">Read More</a>
         </div>
     </div>
 </section>
