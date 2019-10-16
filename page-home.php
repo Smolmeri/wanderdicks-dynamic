@@ -8,18 +8,15 @@
 $hero_image = get_field('hero_image');
 $main_logo = get_field('main_logo');
 
-$mission_image = get_field('mission_image');
-$mission_header = get_field('mission_header');
-$mission_paragraph = get_field('mission_paragraph');
+$project_image = get_field('project_image');
+$project_header = get_field('project_header');
+$project_paragraph = get_field('project_paragraph');
 
 $team_image = get_field('team_image');
 $team_header = get_field('team_header');
 $team_paragraph = get_field('team_paragraph');
 
 $blog_header = get_field('blog_header');
-
-
-
 
 get_header();
 ?>
@@ -46,10 +43,10 @@ get_header();
 <section id="mission">
     <div class="mission-container">
 
-        <div class="mission-image" style="background-image: url(<?php echo $mission_image[url] ?>)">"></div>
+        <div class="mission-image" style="background-image: url(<?php echo $project_image[url] ?>)"></div>
         <div class="mission-text">
-            <h1 class="big-header"><?php echo $mission_header; ?></h1>
-            <p class="narrow-paragraph"><?php echo $mission_paragraph; ?></p>
+            <h1 class="big-header"><?php echo $project_header; ?></h1>
+            <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
 
             <a href="projects"><button class="s-button" style="border: 1px white solid; color: white;">Read More</button></a>
         </div>
