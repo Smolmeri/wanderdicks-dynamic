@@ -32,7 +32,7 @@ get_header();
 </div>
 
 <section id="info">
-    <div class="info-container">
+    <div class="mission-container">
         <i class="fas fa-tree fa-9x"></i>
         <p class="medium-header">We are a group of friends with a passions towards the great outdoors and maintaining it's beauty! Our aim is to plant trees and we also keep a blog of our many adventures.</p>
         <p class="medium-header">Scroll down to get to know us better!</p>
