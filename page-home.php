@@ -8,6 +8,8 @@
 $hero_image = get_field('hero_image');
 $main_logo = get_field('main_logo');
 
+$mission_statement = get_field('mission_statement');
+
 $project_image = get_field('project_image');
 $project_header = get_field('project_header');
 $project_paragraph = get_field('project_paragraph');
@@ -32,10 +34,13 @@ get_header();
 </div>
 
 <section id="info">
-    <div class="mission-container">
-        <i class="fas fa-tree fa-9x"></i>
-        <p class="medium-header">We are a group of friends with a passions towards the great outdoors and maintaining it's beauty! Our aim is to plant trees and we also keep a blog of our many adventures.</p>
-        <p class="medium-header">Scroll down to get to know us better!</p>
+    <div class="mission-info-container">
+        <div class="icons">
+            <i class="fas fa-tree fa-5x"></i>
+            <i class="fas fa-tree fa-9x"></i>
+            <i class="fas fa-tree fa-5x"></i>
+        </div>
+        <p class="small-header"><?php echo $mission_statement ?></p>
     </div>
 </section>
 
@@ -55,7 +60,7 @@ get_header();
             <h1 class="big-header"><?php echo $project_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
 
-            <a id="projects-btn"class="s-button" href="projects">Read More</a>
+            <a id="projects-btn" class="s-button" href="projects">Read More</a>
         </div>
     </div>
 </section>
@@ -88,7 +93,7 @@ get_header();
                 </div>
             </a>
         <?php endwhile; ?>
-        
+
     </div>
     <a href="blog" class="s-button">Read more</a>
 </div>
