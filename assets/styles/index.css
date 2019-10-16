@@ -77,7 +77,7 @@
     visibility: visible;
     transform: translateX(250px);
     transition: .5s transform ease-in-out;
-        /* transition-timing-function: cubic-bezier(.38,.52,.37,1.27); */
+    /* transition-timing-function: cubic-bezier(.38,.52,.37,1.27); */
 }
 
 /* Hero section */
@@ -126,6 +126,7 @@
 #info {
     padding: 10px 50px;
 }
+
 .info-container {
     margin: 50px 0;
     display: flex;
@@ -136,35 +137,24 @@
 
 /* Blog section */
 
-#blog {
-    margin: 50px 0;
-    height: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+#blog>h1 {
+    text-align: center;
+    margin-bottom: 100px;
 }
 
-
-.blog-container {
+.blog-cards-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-}
-
-.blog-header-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 30px 0;
+    margin: 20px 0;
+    height: 100%;
 }
 
 .blog-card {
-    display: flex;
-    flex-flow: column ;
-    width: 33%;
-    height: 100%;
-    margin: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 33%;
+    padding: 10px;
+    margin: 50px 0;
 }
 
 .blog-card:hover {
@@ -174,12 +164,66 @@
 }
 
 .card-image {
-    background-image: url('assets/img/lapland.jpg');
+    min-width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: -10px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .blog-card {
+        width: 90%;
+    }
+}
+
+ /* #blog {
+    margin: 50px 0;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.blog-header-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.blog-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.blog-card {
+    display: flex;
+    flex-flow: column;
+    width: 33%;
+    margin: 20px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+}
+
+.blog-card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 3ms;
+}
+
+.card-image {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 50%;
+    min-width: 100%;
+    min-height: 50%;
+    margin: -5px;
 }
 
 .card-text {
@@ -195,23 +239,60 @@
 .blog-button {
     display: flex;
     flex-flow: column wrap;
-}
+} 
 
 @media only screen and (max-width: 768px) {
     .blog-container {
         display: flex;
-        flex-flow: row wrap;
+        flex-wrap: wrap;
         justify-content: space-around;
+        align-items: center;
+        flex: 0 1 100%;
     }
     .blog-card {
+       flex: 1 0 99%;
+       margin: 0;
+    }
+
+    .card-image {
+        height: 25vh;
+    } */
+    /* .mobile-blog-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    .mobile-blog-card {
         display: flex;
         flex-flow: column;
         width: 100%;
         height: 70%;
-        /* margin: 20px 20px; */
+        margin: 20px 20px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-}
+
+    .mobile-card-image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        min-height: 50%;
+        margin: -5px;
+    }
+    
+    .mobile-card-text {
+        font-size: 0.8em;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px;
+        color: black;
+    } */
+/* } */
 
 /* Mission section */
 
@@ -262,11 +343,8 @@
         flex-flow: column;
         align-items: center;
         justify-content: center;
-        box-shadow: inset 0 0 0 1000px rgba(0,0,0, .4);
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
     }
-
-    
-    
 }
 
 /* About us section */
@@ -289,7 +367,6 @@
     background-size: cover;
     width: 50vw;
     height: 100%;
-
 }
 
 .about-text {
@@ -318,8 +395,6 @@
         color: black;
         /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, .4); */
     }
-
-   
 }
 
 /* Footer */
@@ -331,6 +406,7 @@
     justify-content: center;
     align-items: center;
     border-top: solid black 1px;
+    margin-top: 150px;
 }
 
 .column-1, .column-2 {
@@ -353,8 +429,13 @@
     color: black;
 }
 
-
 /* Miscelanious */
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
 
 html {
     width: 100vw;
@@ -362,12 +443,14 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     color: black;
+    height: auto;
 }
 
 body {
     width: 100vw;
     margin: 0;
     overflow-x: hidden;
+    height: 100%;
 }
 
 .s-button {
@@ -377,8 +460,8 @@ body {
     background: transparent;
     font-size: 1.2em;
     font-weight: 400;
-    width: 120px;
-    height: 56px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -407,5 +490,5 @@ a {
 }
 
 .overlay {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0, .1);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .1);
 }
