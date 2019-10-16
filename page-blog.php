@@ -1,11 +1,4 @@
 <?php
-/*
-    Template Name: Home Page
-*/
-
-// Custom Fields
-
-$blog_header = get_field('blog_header');
 
 get_header();
 ?>

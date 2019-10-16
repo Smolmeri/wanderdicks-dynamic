@@ -142,6 +142,12 @@
     margin-bottom: 100px;
 }
 
+#blog {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
 .blog-cards-container {
     display: flex;
     flex-flow: row wrap;
@@ -178,121 +184,6 @@
         width: 90%;
     }
 }
-
- /* #blog {
-    margin: 50px 0;
-    height: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.blog-header-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.blog-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    height: 100vh;
-}
-
-.blog-card {
-    display: flex;
-    flex-flow: column;
-    width: 33%;
-    margin: 20px;
-    padding: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow-wrap: break-word;
-}
-
-.blog-card:hover {
-    top: -2px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    transition: ease-in-out 3ms;
-}
-
-.card-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-width: 100%;
-    min-height: 50%;
-    margin: -5px;
-}
-
-.card-text {
-    font-size: 0.8em;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 10px;
-    color: black;
-}
-
-.blog-button {
-    display: flex;
-    flex-flow: column wrap;
-} 
-
-@media only screen and (max-width: 768px) {
-    .blog-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        flex: 0 1 100%;
-    }
-    .blog-card {
-       flex: 1 0 99%;
-       margin: 0;
-    }
-
-    .card-image {
-        height: 25vh;
-    } */
-    /* .mobile-blog-container {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 100vh;
-    }
-
-    .mobile-blog-card {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
-        height: 70%;
-        margin: 20px 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .mobile-card-image {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-width: 100%;
-        min-height: 50%;
-        margin: -5px;
-    }
-    
-    .mobile-card-text {
-        font-size: 0.8em;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 10px;
-        color: black;
-    } */
-/* } */
 
 /* Mission section */
 
@@ -456,15 +347,16 @@ body {
 .s-button {
     border: 1px black solid;
     padding: 10px 10px;
-    margin: 10px 10px;
+    
     background: transparent;
     font-size: 1.2em;
     font-weight: 400;
-    width: auto;
+    width: 100px;
     height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    justify-self: flex-end;
     cursor: pointer;
 }
 
