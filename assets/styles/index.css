@@ -127,12 +127,18 @@
     padding: 10px 50px;
 }
 
-.info-container {
+.mission-info-container {
     margin: 50px 0;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.icons {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
 }
 
 /* Blog section */
@@ -146,6 +152,7 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 .blog-cards-container {
@@ -161,6 +168,7 @@
     width: 33%;
     padding: 10px;
     margin: 50px 0;
+    background-color: white;
 }
 
 .blog-card:hover {
@@ -182,6 +190,10 @@
 
     .blog-card {
         width: 90%;
+    }
+
+    #blog {
+        background-color:#97B3CB;
     }
 }
 
@@ -317,7 +329,6 @@
     justify-content: center;
     align-items: center;
     border-top: solid black 1px;
-    margin-top: 150px;
 }
 
 .column-1, .column-2 {
