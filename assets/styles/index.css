@@ -106,14 +106,14 @@
     color: white;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 820px) {
     .hero-container>img {
         width: 500px;
         height: 500px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
     .hero-container {
         display: flex;
         flex-flow: column wrap;
@@ -178,7 +178,7 @@
     margin: -10px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
 
     .blog-card {
         width: 90%;
@@ -220,7 +220,7 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
     .mission-image {
         display: none;
     }
@@ -269,7 +269,7 @@
     align-items: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
     .about-image {
         display: none;
     }
@@ -322,7 +322,7 @@
 
 /* Miscelanious */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 820px) {
     html {
         font-size: 16px;
     }
