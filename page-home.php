@@ -28,7 +28,7 @@ get_header();
 <div class="hero-container" style="background-image: url(<?php echo $hero_image[url] ?>)">
     <!-- <div class="overlay"></div> -->
     <img src="<?php echo $main_logo[url] ?>" alt="<?php echo $main_logo[alt] ?>">
-    <h1 class="big-header"><?php bloginfo('name') ?></h1>
+    <h1 class="main-header"><?php bloginfo('name') ?></h1>
     <h2><?php bloginfo('description') ?></h2>
     <a href="#info"><i class="fas fa-angle-down fa-5x"></i></a>
 </div>

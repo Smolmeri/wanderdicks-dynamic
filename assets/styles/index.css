@@ -393,6 +393,13 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+.main-header {
+    font-size: 5em;
+    letter-spacing: .5em;
+    box-shadow: rgba(0, 0, 0, .4);
 }
 
 .big-header {
