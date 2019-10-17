@@ -91,7 +91,7 @@ get_header();
                 <div class="card-text">
                     <h1><?php the_title(); ?></h1>
                     <?php the_excerpt(); ?>
-                    <?php the_author(); ?>
+                    <span class="name-span"><?php the_author(); ?></span>
                 </div>
             </a>
         <?php endwhile; ?>

@@ -24,8 +24,8 @@ get_header();
 				<div class="author-avatar">
 					<?php echo $avatar; ?>
 					<div class="text-box">
-						<span><?php the_author(); ?></span>
-						<span><?php the_date('M jS y'); ?></span>
+						<span class="name-span"><?php the_author(); ?></span>
+						<span class="light-span"><?php the_date('M jS y'); ?></span>
 					</div>
 				</div>
 		</div>

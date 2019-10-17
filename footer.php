@@ -48,7 +48,7 @@
     </div>
 </div>
 <div class="toiminimi">
-    <span>Tuomas Paavolainen Tmi <script>
+    <span class="name-span">Tuomas Paavolainen Tmi <script>
             document.write(new Date().getFullYear())
         </script></span>
 </div>

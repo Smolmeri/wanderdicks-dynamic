@@ -339,6 +339,10 @@
     justify-content: center;
 }
 
+.column-2 {
+    width: 18%;
+}
+
 .footer-nav-list {
     display: flex;
     flex-flow: column;
@@ -356,7 +360,7 @@
     padding: 0;
 }
 
-.footer-nav-list a, li {
+.footer-nav-list a {
     list-style: none;
     text-decoration: none;
     color: black;
@@ -403,6 +407,22 @@ body {
 ul {
     padding: 0;
 }
+
+li {
+    list-style: none;
+}
+
+.name-span {
+    font-size: .9em;
+    color: rgba(0, 1, 1, .8);
+    font-weight: 100;
+}
+.light-span  {
+    font-size: .8em;
+    color: rgba(0, 1, 1, .4);
+    font-weight: 200;
+}
+
 
 .toiminimi {
     background-color: #fcfaf8;
