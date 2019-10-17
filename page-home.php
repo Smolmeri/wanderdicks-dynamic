@@ -44,7 +44,7 @@ get_header();
     </div>
 </section>
 
-<!-- Mission section -->
+<!-- Projects section -->
 <section id="mission">
     <div class="projects-container">
 
@@ -77,6 +77,8 @@ get_header();
         </div>
     </div>
 </section>
+
+<!-- Blog Section -->
 
 <div id="blog">
     <h1 class="big-header"><?php echo $blog_header; ?></h1>

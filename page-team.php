@@ -23,9 +23,9 @@ get_header();
         <div class="card">
             <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>
             <?php if( !empty($url)) : ?>
-                <div class="card-image" style="background-image: url(<?php echo $url ?>)"></div>
+                <div class="member-image" style="background-image: url(<?php echo $url ?>)"></div>
             <?php elseif(empty($url)) : ?>
-                <div class="card-image" style="background-image: url(/assets/img/lapland.jpg);"></div>
+                <div class="member-image" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/no_avatar");"></div>
             <?php endif ?>
             <div class="card-container">
                 <h4><b><?php the_field('full_name'); ?></b></h4>
