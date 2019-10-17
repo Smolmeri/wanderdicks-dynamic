@@ -15,40 +15,47 @@
 <?php wp_footer(); ?>
 
 <!-- Footer -->
-        <div class="footer-container">
-            <div class="column-1">
-                <p>Wanderdics</p>
-                <p>email@address.com</p>
-            </div>
-            <div class="footer-nav-list">
-                <ul>
-                    <a href="home">
-                        <li>Home</li>
-                    </a>
-                    <a href="projects">
-                        <li>Projects</li>
-                    </a>
-                    <a href="blog">
-                        <li>Blog</li>
-                    </a>
-                    <a href="team">
-                        <li>The Team</li>
-                    </a>
-                </ul>
-            </div>
+<div class="footer-container">
+    <div class="column-1">
+        <ul>
+            <li>Wanderdics</li>
+            <li>wanderdicks@gmail.com</li>
+            <ul>
+    </div>
 
-            <div class="column-2">
-                <p>Design & development: <br>
-                    <a href="www.github.com/Smolmeri">
-                        Tuomas Paavolainen Tmi
-                    </a>
-                </p>
-            </div>
+    <!-- <div class="instagram"> -->
+        <a href="https://www.instagram.com/wanderdicks/?hl=fi"><i class="fab fa-instagram fa-5x"></i></a>
+    <!-- </div> -->
+
+
+    <div class="column-2">
+        <div class="footer-nav-list">
+            <ul>
+                <a href="home">
+                    <li>Home</li>
+                </a>
+                <a href="projects">
+                    <li>Projects</li>
+                </a>
+                <a href="blog">
+                    <li>Blog</li>
+                </a>
+                <a href="team">
+                    <li>The Team</li>
+                </a>
+            </ul>
         </div>
+    </div>
+</div>
+<div class="toiminimi">
+    <span>Tuomas Paavolainen Tmi <script>
+            document.write(new Date().getFullYear())
+        </script></span>
+</div>
 
 
-        <script src="<?php bloginfo('template_directory'); ?>/assets/js/index.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/assets/js/index.js"></script>
 
-    </body>
+</body>
 
 </html>

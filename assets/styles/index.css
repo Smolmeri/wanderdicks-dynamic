@@ -323,16 +323,20 @@
 /* Footer */
 
 .footer-container {
-    /* height: 33vh; */
+    height: 100%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row-reverse wrap;
+    justify-content: space-evenly;
     align-items: center;
     border-top: solid black 1px;
+    width: 100%;
 }
 
 .column-1, .column-2 {
-    margin: 0 100px;
+    height: 70%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }
 
 .footer-nav-list {
@@ -344,11 +348,32 @@
     justify-content: center;
 }
 
-.footer-nav-list a {
+.footer-nav-list ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 0;
+}
+
+.footer-nav-list a, li {
     list-style: none;
-    height: 50%;
     text-decoration: none;
     color: black;
+}
+
+@media only screen and (max-width: 820px) { 
+    .footer-container {
+        display: flex;
+        flex-flow: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 70vh;
+    }
+
+    .footer-nav-list a {
+        margin: 10px 0;
+    }
 }
 
 /* Miscelanious */
@@ -373,6 +398,17 @@ body {
     margin: 0;
     overflow-x: hidden;
     height: 100%;
+}
+
+ul {
+    padding: 0;
+}
+
+.toiminimi {
+    background-color: #fcfaf8;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: -10px;
 }
 
 .s-button {
