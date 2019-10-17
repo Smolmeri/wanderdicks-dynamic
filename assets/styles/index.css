@@ -37,6 +37,17 @@
     transform: rotate(-45deg) translate3d(13px, -18px, 0);
 }
 
+.nav-wrapper {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    background-color: black;
+    transform: rotate(45deg);
+    left: -118px;
+    top: -74px;
+    opacity: .8;
+}
+
 .nav-list {
     display: flex;
     flex-flow: column;
@@ -56,6 +67,7 @@
     width: 50px;
 }
 
+
 .nav-list a {
     color: white;
     opacity: 1;
@@ -73,11 +85,17 @@
     padding: 0;
 }
 
-.hidden {
+.show {
     visibility: visible;
     transform: translateX(250px);
     transition: .5s transform ease-in-out;
     /* transition-timing-function: cubic-bezier(.38,.52,.37,1.27); */
+}
+
+.hide {
+    visibility: hidden;
+    transform: translateX(-1000px);
+    transition: .3s transform ease-in-out;
 }
 
 /* Hero section */

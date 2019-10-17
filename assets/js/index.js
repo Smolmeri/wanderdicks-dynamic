@@ -8,7 +8,10 @@ const onNavPress = () => {
     const bar3 = document.querySelector('.bar3');
     bar3.classList.toggle('change');
 
-    const hide = document.querySelector('.nav-list');
-    hide.classList.toggle('hidden');
+    const show = document.querySelector('.nav-list');
+    show.classList.toggle('show');
+
+    const hide = document.querySelector('.nav-wrapper');
+    hide.classList.toggle('hide');
 }
 
