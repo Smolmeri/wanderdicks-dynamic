@@ -21,8 +21,11 @@
     display: flex;
     flex-flow: column wrap;
     /* margin: 100px 0; */
-    height: 50vh;
+    /* height: 50vh; */
     justify-content: flex-start;
+    align-items: center;
+    padding: 0 20%;
+    margin-bottom: 100px;
 }
 
 /* Team member cards */

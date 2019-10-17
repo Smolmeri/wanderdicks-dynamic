@@ -44,16 +44,16 @@ $white_logo = get_field('white_logo');
 
 
         <div class="nav-list">
-            <img style="width: 225px; height: 200px;" src="<?php echo $white_logo[url]; ?>">
+            <a href="home"><img style="width: 225px; height: 200px;" src="<?php echo $white_logo[url]; ?>"></a>
             <ul>
                 <a href="home">
                     <li>Home</li>
                 </a>
                 <a href="projects">
-                    <li>Mission</li>
+                    <li>Projects</li>
                 </a>
                 <a href="blog">
-                    <li>Adventures</li>
+                    <li>Stories</li>
                 </a>
                 <a href="team">
                     <li>Meet the Team</li>
