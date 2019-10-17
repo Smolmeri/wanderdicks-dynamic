@@ -56,7 +56,7 @@
     position: fixed;
     background-color: black;
     opacity: .8;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     visibility: hidden;
     left: -250px;
@@ -82,6 +82,9 @@
 }
 
 .nav-list ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     padding: 0;
 }
 
@@ -116,8 +119,8 @@
 }
 
 .hero-container>img {
-    width: 200px;
-    height: 300px;
+    width: 225px;
+    height: 200px;
 }
 
 .hero-container>a {
@@ -126,8 +129,8 @@
 
 @media only screen and (min-width: 820px) {
     .hero-container>img {
-        width: 500px;
-        height: 500px;
+        width: 425px;
+        height: 400px;
     }
 }
 

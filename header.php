@@ -10,6 +10,11 @@
  * @package Wanderdicks
  */
 
+// Custom Fields
+
+$white_logo = get_field('white_logo');
+
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -31,15 +36,15 @@
     <div id="page" class="site">
         <!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'wanderdicks'); ?></a> -->
         <div class="nav-wrapper"></div>
-            <div class="nav-container" onclick="onNavPress()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-        
+        <div class="nav-container" onclick="onNavPress()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
 
         <div class="nav-list">
-            <img src="./assets/img/tempLogo.png" alt="asd">
+            <img style="width: 225px; height: 200px;" src="<?php echo $white_logo[url]; ?>">
             <ul>
                 <a href="home">
                     <li>Home</li>
@@ -52,6 +57,12 @@
                 </a>
                 <a href="team">
                     <li>Meet the Team</li>
+                </a>
+
+                <a href="https://www.instagram.com/wanderdicks/?hl=fi">
+                    <li>
+                        <i class="fab fa-instagram fa-3x"></i>
+                    </li>
                 </a>
             </ul>
         </div>
