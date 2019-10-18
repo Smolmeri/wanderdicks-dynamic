@@ -17,7 +17,7 @@ $white_logo = get_field('white_logo');
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html class="html" <?php language_attributes();  ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -59,7 +59,7 @@ $white_logo = get_field('white_logo');
                     <li>Meet the Team</li>
                 </a>
 
-                <a href="https://www.instagram.com/wanderdicks/?hl=fi">
+                <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi">
                     <li>
                         <i class="fab fa-instagram fa-3x"></i>
                     </li>

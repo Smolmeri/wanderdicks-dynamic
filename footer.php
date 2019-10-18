@@ -24,7 +24,7 @@
     </div>
 
     <!-- <div class="instagram"> -->
-        <a href="https://www.instagram.com/wanderdicks/?hl=fi"><i class="fab fa-instagram fa-5x"></i></a>
+        <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi"><i class="fab fa-instagram fa-5x"></i></a>
     <!-- </div> -->
 
 
