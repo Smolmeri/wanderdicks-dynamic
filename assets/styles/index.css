@@ -72,7 +72,6 @@
     color: white;
     opacity: 1;
     list-style: none;
-    height: 50%;
     font-weight: bold;
     text-decoration: none;
 }
@@ -223,6 +222,7 @@
 
 /* Projects section */
 
+
 .projects-container {
     display: flex;
     flex-flow: row;
@@ -295,6 +295,10 @@
 }
 
 /* About us section */
+
+#about {
+    margin-bottom: 50px;
+}
 
 .about-container {
     display: flex;
@@ -445,6 +449,11 @@ li {
 
 h1 {
     font-family: 'Roboto Slab', serif;
+}
+
+.centered-p {
+    line-height: 25px;
+    text-align: center;
 }
 
 .name-span {

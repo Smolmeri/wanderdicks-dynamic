@@ -24,8 +24,9 @@ get_header();
 <div class="mission-main">
     <div class="text-container">
     <?php while (have_posts()) : the_post(); ?>
-				<?php the_content(); ?>
-	<?php endwhile; ?>
+                <?php the_content(); ?>
+    <?php endwhile; ?>
+    
     </div>
 
 </div>

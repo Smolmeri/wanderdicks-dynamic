@@ -40,12 +40,12 @@ get_header();
             <i class="fas fa-tree fa-9x"></i>
             <i class="fas fa-tree fa-5x"></i>
         </div>
-        <p class="small-header"><?php echo $mission_statement ?></p>
+        <p class="small-header centered-p"><?php echo $mission_statement ?></p>
     </div>
 </section>
 
 <!-- Projects section -->
-<section id="mission">
+<section id="projects">
     <div class="projects-container">
 
         <div class="projects-image" style="background-image: url(<?php echo $project_image[url] ?>)"></div>

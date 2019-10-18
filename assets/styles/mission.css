@@ -9,7 +9,6 @@
 
 .mission-image {
     min-width: 50%;
-    background-image: url('../img/planting.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +19,7 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    width: 50%;
     margin: 20px;
 }
 
@@ -54,6 +54,8 @@
     justify-content: center;
     width: 50vw;
     margin: 20px 30px;
+    line-height: 28.5px;
+
 }
 
 

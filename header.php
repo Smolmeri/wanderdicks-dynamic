@@ -44,7 +44,7 @@ $white_logo = get_field('white_logo');
 
 
         <div class="nav-list">
-            <a href="home"><img style="width: 225px; height: 200px;" src="<?php echo $white_logo[url]; ?>"></a>
+            <a href="home"><img style="width: 225px; height: 200px;" src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/img/wanderdicks_white.png"></a>
             <ul>
                 <a href="home">
                     <li>Home</li>

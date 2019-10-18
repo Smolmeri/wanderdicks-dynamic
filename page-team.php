@@ -15,8 +15,7 @@ get_header();
     <div class="team-hero-image" style="background-image: url(<?php echo $main_image[url] ?>)"></div>
     <div class="team-hero-container">
         <h1 class="big-header" style="color: black;"><?php echo $main_header ?></h1>
-
-        <p><?php echo $team_body; ?></p>
+        <p class="centered-p"><?php echo $team_body; ?></p>
     </div>
 
     <!-- Team member cards -->
@@ -28,7 +27,7 @@ get_header();
                 <?php if (!empty($url)) : ?>
                     <div class="member-image" style="background-image: url(<?php echo $url ?>)"></div>
                 <?php elseif (empty($url)) : ?>
-                    <div class="member-image" style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/no_avatar" );"></div>
+                    <div class="member-image" style="background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/no_avatar.png"></div>
                 <?php endif ?>
                 <div class="card-container">
                     <h4><b><?php the_field('full_name'); ?></b></h4>
@@ -37,7 +36,7 @@ get_header();
             </div>
         <?php endwhile; ?>
     </div>
-
+</div>
     <?php
     get_footer();
     ?>
