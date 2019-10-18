@@ -28,7 +28,7 @@ $white_logo = get_field('white_logo');
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/mission.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/team.css">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 

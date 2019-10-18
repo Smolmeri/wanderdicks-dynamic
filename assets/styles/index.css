@@ -110,12 +110,13 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: url(/assets/styles/img/hero-2.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
+   font-family: 'Roboto Slab', serif;
+
 }
 
 .hero-container>img {
@@ -192,7 +193,7 @@
 .blog-card {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 33%;
-    padding: 10px;
+    padding: 15px;
     margin: 50px 0;
     background-color: white;
 }
@@ -209,13 +210,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: -10px;
+    margin: -15px;
 }
 
 @media only screen and (max-width: 820px) {
 
     .blog-card {
-        width: 90%;
+        width: 80%;
     }
 
 }
@@ -418,12 +419,12 @@
 
 html {
     width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
     color: black;
     height: auto;
     background: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -433,6 +434,7 @@ body {
     height: 100%;
 }
 
+
 ul {
     padding: 0;
 }
@@ -441,8 +443,12 @@ li {
     list-style: none;
 }
 
+h1 {
+    font-family: 'Roboto Slab', serif;
+}
+
 .name-span {
-    font-size: .9em;
+    font-size: .8em;
     color: rgba(0, 1, 1, .8);
     font-weight: 100;
 }
