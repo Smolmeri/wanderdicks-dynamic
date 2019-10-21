@@ -20,6 +20,10 @@
     width: 25px;
 }
 
+.bar3 {
+    width: 15px
+}
+
 .bar1.change {
     display: inline-block;
     transform: rotate(45deg) translate3d(8.28571px, 10px, 0);
@@ -32,6 +36,7 @@
 
 .bar3.change {
     top: 10px;
+    width: 34px;
     display: inline-block;
     -webkit-transform: rotate(-45deg) translate3d(17px, -18px, 0);
     transform: rotate(-45deg) translate3d(13px, -18px, 0);
@@ -98,6 +103,12 @@
     visibility: hidden;
     transform: translateX(-1000px);
     transition: .3s transform ease-in-out;
+}
+
+.hide-clicked-html {
+    visibility: hidden;
+    transform: translateX(-250px);
+    transition: .5s transform ease-in-out;
 }
 
 /* Hero section */
@@ -479,11 +490,10 @@ h1 {
 .s-button {
     border: 1px black solid;
     padding: 10px 10px;
-    
     background: transparent;
     font-size: 1.2em;
     font-weight: 400;
-    width: 100px;
+    width: 130px;
     height: auto;
     display: flex;
     flex-flow: row wrap;

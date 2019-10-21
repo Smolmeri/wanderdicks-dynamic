@@ -29,12 +29,9 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
-.mission-text > p {
-    text-align: left;
-}
 
 .mission-container-mobile, .mission-main-mobile {
     display: none;

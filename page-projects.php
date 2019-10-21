@@ -17,16 +17,22 @@ get_header();
             <h1 class="big-header"><?php echo $main_header ?></h1>
             <!-- <div class="mission-image-2" style="background-image: url(<?php echo $mission_image[url] ?>)"></div> -->
             <p><?php echo $sub_header ?></p>
+            <p class="name-span">If you want to support become a supporter then click <u><a href="#payment">here!</a></u></p>
         </div>
     </div>
 </div>
 
 <div class="mission-main">
     <div class="text-container">
-    <?php while (have_posts()) : the_post(); ?>
-                <?php the_content(); ?>
-    <?php endwhile; ?>
-    
+        <?php while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; ?>
+        <div id="payment" class="payment-details">
+            <H1>Payment details</H1>
+            <p>Wanderdicks Ry</p>
+            <p>FI 123 124120123913</p>
+            <p>BIC: NDDEAFF</p>
+        </div>
     </div>
 
 </div>
@@ -44,9 +50,9 @@ get_header();
 
 <div class="mission-main-mobile">
     <div class="text-container-mobile">
-    <?php while (have_posts()) : the_post(); ?>
-				<?php the_content(); ?>
-	<?php endwhile; ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; ?>
     </div>
 </div>
 

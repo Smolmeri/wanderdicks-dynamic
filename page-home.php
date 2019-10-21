@@ -53,14 +53,14 @@ get_header();
             <h1 class="big-header"><?php echo $project_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
 
-            <a id="projects-btn" class="s-button" href="projects">Read More</a>
+            <a id="projects-btn" class="s-button" href="projects">Learn More</a>
         </div>
 
         <div style="background-image: url(<?php echo $project_image[url] ?>)" class="projects-text-mobile">
             <h1 class="big-header"><?php echo $project_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
 
-            <a id="projects-btn" class="s-button" href="projects">Read More</a>
+            <a id="projects-btn" class="s-button" href="projects">Learn More</a>
         </div>
     </div>
 </section>
@@ -73,7 +73,7 @@ get_header();
         <div class="about-text">
             <h1 class="big-header"><?php echo $team_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $team_paragraph; ?></p>
-            <a href="team"><button class="s-button">>></button></a>
+            <a href="team"><button class="s-button">Learn More</button></a>
         </div>
     </div>
 </section>
@@ -87,12 +87,16 @@ get_header();
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
             <a class="blog-card" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>
-                <div class="card-image" style="background-image: url(<?php echo $url; ?>"></div>
-                <div class="card-text">
-                    <h1><?php the_title(); ?></h1>
-                    <?php the_excerpt(); ?>
-                    <span class="name-span"><?php the_author(); ?></span>
-                </div>
+                <?php if (!empty($url)) : ?>
+                    <div class="card-image" style="background-image: url(<?php echo $url; ?>"></div>
+                <?php elseif (empty($url)) : ?>
+                    <div class="card-image" style="background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/wanderdicks_black.png);"></div>
+                <?php endif ?>
+                    <div class=" card-text">
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_excerpt(); ?>
+                        <span class="name-span"><?php the_author(); ?></span>
+                    </div>
             </a>
         <?php endwhile; ?>
 

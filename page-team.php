@@ -27,7 +27,7 @@ get_header();
                 <?php if (!empty($url)) : ?>
                     <div class="member-image" style="background-image: url(<?php echo $url ?>)"></div>
                 <?php elseif (empty($url)) : ?>
-                    <div class="member-image" style="background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/no_avatar.png"></div>
+                    <div class="member-image" style="background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/wanderdicks_black.png)"></div>
                 <?php endif ?>
                 <div class="card-container">
                     <h4><b><?php the_field('full_name'); ?></b></h4>
