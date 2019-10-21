@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 99999;
     margin: 10px;
+    padding: 10px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -49,7 +50,7 @@
     background-color: black;
     transform: rotate(45deg);
     left: -118px;
-    top: -74px;
+    top: -106px;
     opacity: .8;
 }
 
@@ -440,6 +441,7 @@ html {
     height: auto;
     background: #F5F5F5;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: auto;
 }
 
 body {
