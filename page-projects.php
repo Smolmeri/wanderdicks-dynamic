@@ -6,6 +6,9 @@ $main_image = get_field('main_image');
 $main_header = get_field('main_header');
 $sub_header = get_field('sub_header');
 
+$iban = get_field('iban');
+$bic = get_field('bic');
+
 get_header();
 ?>
 
@@ -30,8 +33,8 @@ get_header();
         <div id="payment" class="payment-details">
             <H1>Payment details</H1>
             <p>Wanderdicks Ry</p>
-            <p>FI 123 124120123913</p>
-            <p>BIC: NDDEAFF</p>
+            <p><?php echo $iban ?></p>
+            <p>BIC: <?php echo $bic ?></p>
         </div>
     </div>
 
@@ -57,8 +60,8 @@ get_header();
         <div id="payment-mobile" class="payment-details">
             <H1>Payment details</H1>
             <p>Wanderdicks Ry</p>
-            <p>FI 123 124120123913</p>
-            <p>BIC: NDDEAFF</p>
+            <p><?php echo $iban ?></p>
+            <p>BIC: <?php echo $bic ?></p>
         </div>
     </div>
 </div>

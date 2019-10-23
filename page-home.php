@@ -23,6 +23,8 @@ $blog_header = get_field('blog_header');
 get_header();
 ?>
 
+<a class="scrollup" style="display: block; background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/arrow-up.png;" href="#"></a>
+
 
 <!-- Hero image -->
 <div class="hero-container" style="background-image: url(<?php echo $hero_image[url] ?>)">
