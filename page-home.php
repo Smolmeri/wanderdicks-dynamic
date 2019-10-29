@@ -23,19 +23,21 @@ $blog_header = get_field('blog_header');
 get_header();
 ?>
 
-<a class="scrollup" style="display: block; background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/arrow-up.png;" href="#"></a>
+<a class="scrollup" style="display: block; background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/arrow-up.png;" onclick="smoothScrollUp()"></a>
 
 
 <!-- Hero image -->
-<div class="hero-container" style="background-image: url(<?php echo $hero_image[url] ?>)">
+<div id="hero" class="hero-container scrollUp" style="background-image: url(<?php echo $hero_image[url] ?>)">
     <!-- <div class="overlay"></div> -->
     <img src="<?php echo $main_logo[url] ?>" alt="<?php echo $main_logo[alt] ?>">
-    <h1 class="main-header"><?php bloginfo('name') ?></h1>
+    <h1 class="main-header" id="easterEgg"><?php bloginfo('name') ?></h1>
+    <h1 class="newText"></h1>
+    <!-- <audio src="<?php echo bloginfo('template_directory'); ?>/assets/audio/theme.mp3;"></audio> -->
     <h2><?php bloginfo('description') ?></h2>
-    <a href="#info"><i class="fas fa-angle-down fa-5x"></i></a>
+    <a><i class="fas fa-angle-down fa-5x" onclick="smoothScroll()"></i></a>
 </div>
 
-<section id="info">
+<section class="scrollHere" id="info">
     <div class="mission-info-container">
         <div class="icons">
             <i class="fas fa-tree fa-5x"></i>
@@ -94,11 +96,11 @@ get_header();
                 <?php elseif (empty($url)) : ?>
                     <div class="card-image" style="background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/wanderdicks_black.png);"></div>
                 <?php endif ?>
-                    <div class=" card-text">
-                        <h1><?php the_title(); ?></h1>
-                        <?php the_excerpt(); ?>
-                        <span class="name-span"><?php the_author(); ?></span>
-                    </div>
+                <div class=" card-text">
+                    <h1><?php the_title(); ?></h1>
+                    <?php the_excerpt(); ?>
+                    <span class="name-span"><?php the_author(); ?></span>
+                </div>
             </a>
         <?php endwhile; ?>
 

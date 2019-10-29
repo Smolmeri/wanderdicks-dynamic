@@ -18,17 +18,17 @@
 <div class="footer-container">
     <div class="column-1">
         <ul>
-            <li>Wanderdics</li>
+            <li>Wanderdicks</li>
             <li>wanderdicks@gmail.com</li>
-            <ul>
+        </ul>
     </div>
 
-    <!-- <div class="instagram"> -->
+    <div class="instagram">
         <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi"><i class="fab fa-instagram fa-5x"></i></a>
-    <!-- </div> -->
+    </div>
 
 
-    <div class="column-2">
+    <!-- <div class="column-2"> -->
         <div class="footer-nav-list">
             <ul>
                 <a href="home">
@@ -45,7 +45,8 @@
                 </a>
             </ul>
         </div>
-    </div>
+    <!-- </div> -->
+
 </div>
 <div class="toiminimi">
     <span style="color: white;" class="name-span">Tuomas Paavolainen Tmi <script>
@@ -55,6 +56,7 @@
 
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/index.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch&flags=gated"></script>
 
 </body>
 
