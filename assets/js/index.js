@@ -38,14 +38,14 @@ const smoothScrollUp = () => {
 let count = 0;
 const easterEggCounter = document.getElementById("easterEgg");
 const newText = document.querySelector('.newText');
-const audio = new Audio('url("<?php echo bloginfo('template_directory') ?>/assets/audio/theme.mp3;")');
+// const audio = new Audio('url("<?php echo bloginfo('template_directory') ?>/assets/audio/theme.mp3;")');
 easterEggCounter.onclick = () => {
     count++;
     console.log(count);
     if (count == 10) {
         easterEggCounter.style.display = "none";
         newText.classList.toggle('easterEgg');
-        newText.innerHTML = "SKDIC";
+        newText.innerHTML = "DICKS";
         audio.play()
     }
 }

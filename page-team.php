@@ -14,7 +14,7 @@ get_header();
 <div class="container-team">
     <div class="team-hero-image" style="background-image: url(<?php echo $main_image[url] ?>)"></div>
     <div class="team-hero-container">
-        <h1 class="big-header" style="color: black;"><?php echo $main_header ?></h1>
+        <h1 class="big-header" style="color: black; white-space: nowrap;"><?php echo $main_header ?></h1>
         <p class="centered-p"><?php echo $team_body; ?></p>
     </div>
 

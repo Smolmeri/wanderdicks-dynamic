@@ -24,24 +24,24 @@
     </div>
 
     <div class="instagram">
-        <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi"><i class="fab fa-instagram fa-5x"></i></a>
+        <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi" onclick=ga(‘send’, ‘event’, [Icons], [Clicked], [Instagram]);><i class="fab fa-instagram fa-5x"></i></a>
     </div>
 
 
     <!-- <div class="column-2"> -->
         <div class="footer-nav-list">
             <ul>
-                <a href="home">
+            <a href="home" onclick=ga(‘send’, ‘event’, [NavigationMenu], [Clicked], [HomePage]);>
                     <li>Home</li>
                 </a>
-                <a href="projects">
+                <a href="projects" onclick=ga(‘send’, ‘event’, [FooterMenu], [Clicked], [ProjectsPage]);>
                     <li>Projects</li>
                 </a>
-                <a href="blog">
-                    <li>Blog</li>
+                <a href="blog"  onclick=ga(‘send’, ‘event’, [FooterMenu], [Clicked], [BlogPage]);>
+                    <li>Stories</li>
                 </a>
-                <a href="team">
-                    <li>The Team</li>
+                <a href="team"  onclick=ga(‘send’, ‘event’, [FooterMenu], [Clicked], [TeamPage]);>
+                    <li>Meet the Team</li>
                 </a>
             </ul>
         </div>

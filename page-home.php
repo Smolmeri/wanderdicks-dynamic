@@ -23,7 +23,7 @@ $blog_header = get_field('blog_header');
 get_header();
 ?>
 
-<a class="scrollup" style="display: block; background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/arrow-up.png;" onclick="smoothScrollUp()"></a>
+<a class="scrollup" style="display: block; background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/arrow-up.png;" onclick=smoothScrollUp() onclick=smoothScroll() ga(‘send’, ‘event’, [Animations], [Clicked], [ArrowUp]);></a>
 
 
 <!-- Hero image -->
@@ -34,10 +34,10 @@ get_header();
     <h1 class="newText"></h1>
     <!-- <audio src="<?php echo bloginfo('template_directory'); ?>/assets/audio/theme.mp3;"></audio> -->
     <h2><?php bloginfo('description') ?></h2>
-    <a><i class="fas fa-angle-down fa-5x" onclick="smoothScroll()"></i></a>
+    <i class="fas fa-angle-down fa-5x" onclick=smoothScroll() ga(‘send’, ‘event’, [Animations], [Clicked], [ArrowDown]);></i>
 </div>
 
-<section class="scrollHere" id="info">
+<section class="scrollHere" id="info"> 
     <div class="mission-info-container">
         <div class="icons">
             <i class="fas fa-tree fa-5x"></i>
@@ -64,7 +64,7 @@ get_header();
             <h1 class="big-header"><?php echo $project_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $project_paragraph; ?></p>
 
-            <a id="projects-btn" class="s-button" href="projects">Learn More</a>
+            <a id="projects-btn" class="s-button" href="projects" onclick=ga(‘send’, ‘event’, [HomePage], [Clicked], [ProjectsButton]);>Learn More</a>
         </div>
     </div>
 </section>
@@ -77,7 +77,7 @@ get_header();
         <div class="about-text">
             <h1 class="big-header"><?php echo $team_header; ?></h1>
             <p class="narrow-paragraph"><?php echo $team_paragraph; ?></p>
-            <a href="team"><button class="s-button">Learn More</button></a>
+            <a href="team" onclick=ga(‘send’, ‘event’, [HomePage], [Clicked], [TeamButton]);><button class="s-button">Learn More</button></a>
         </div>
     </div>
 </section>
@@ -89,7 +89,7 @@ get_header();
     <div class="blog-cards-container">
         <?php $loop = new WP_Query(array('posts_per_page' => 4, 'post_type' => 'blog_posts', 'orderby' => 'post_id', 'order' => 'DESC')); ?>
         <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-            <a class="blog-card" href="<?php echo get_permalink(get_option('page_for_posts')); ?>">
+            <a class="blog-card" href="<?php echo get_permalink(get_option('page_for_posts')); ?>" onclick=ga(‘send’, ‘event’, [HomePage], [Clicked], [SingleBlog]);>
                 <?php $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), 'thumbnail'); ?>
                 <?php if (!empty($url)) : ?>
                     <div class="card-image" style="background-image: url(<?php echo $url; ?>"></div>
@@ -105,7 +105,7 @@ get_header();
         <?php endwhile; ?>
 
     </div>
-    <a href="blog" class="s-button">Read more</a>
+    <a href="blog" onclick=ga(‘send’, ‘event’, [HomePage], [Clicked], [BlogReadMore]); class="s-button">Read more</a>
 </div>
 
 
