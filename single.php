@@ -11,6 +11,8 @@
 get_header();
 ?>
 
+<a data-scroll href="#single-post" class="scrollup" style="display: block; margin: 10px; background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/arrow-up.png;" onclick="ga('send', 'event', 'Animations', 'Clicked', 'ArrowUp');"></a>
+
 <div id=single-post>
 	<div class="single-container">
 		<div class="info-container">
@@ -18,7 +20,7 @@ get_header();
 				<h1>
 					<?php the_title(); ?>
 				</h1>
-
+				<!-- Add the category() here when working -->
 				<?php $id = get_the_author_meta('ID'); ?>
 				<?php $avatar = get_avatar($id, 48, 'retro'); ?>
 				<div class="author-avatar">
@@ -39,6 +41,9 @@ get_header();
 	<?php endwhile; ?>
 
 	</div>
+		<?php comments_template() ?>
 </div>
+
+
 
 <?php get_footer();

@@ -574,11 +574,424 @@ template {
 --------------------------------------------------------------*/
 .comment-content a {
 	word-wrap: break-word;
-}
-
-.bypostauthor {
+  }
+  
+  .bypostauthor {
 	display: block;
-}
+  }
+  
+  .comments-area {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	margin: calc(2 * 1rem) 1rem;
+	word-wrap: break-word;
+	/* Add extra margin when the comments section is located immediately after the
+	   * post itself (this happens on pages).
+	   */
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comments-area {
+	  max-width: calc(8 * (100vw / 12) - 28px);
+	}
+  }
+  
+  @media only screen and (min-width: 1168px) {
+	.comments-area {
+	  max-width: calc(6 * (100vw / 12) - 28px);
+	}
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comments-area {
+	  margin: calc(3 * 1rem) calc(10% + 60px);
+	}
+  }
+  
+  .comments-area > * {
+	margin-top: calc(2 * 1rem);
+	margin-bottom: calc(2 * 1rem);
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comments-area > * {
+	  margin-top: calc(3 * 1rem);
+	  margin-bottom: calc(3 * 1rem);
+	}
+  }
+  
+  .entry + .comments-area {
+	margin-top: calc(3 * 1rem);
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comments-area .comments-title-wrap {
+	  align-items: baseline;
+	  display: flex;
+	  justify-content: space-between;
+	}
+  }
+  
+  .comments-area .comments-title-wrap .comments-title {
+	margin: 0;
+  }
+  
+  .comments-area .comments-title-wrap .comments-title:before {
+	background: #767676;
+	content: "\020";
+	display: block;
+	height: 2px;
+	margin: 1rem 0;
+	width: 1em;
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comments-area .comments-title-wrap .comments-title {
+	  flex: 1 0 calc(3 * (100vw / 12));
+	}
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comments-area .comments-title-wrap .discussion-meta {
+	  flex: 0 0 calc(2 * (100vw / 12));
+	  margin-left: 1rem;
+	}
+  }
+  
+  #comment {
+	max-width: 100%;
+	box-sizing: border-box;
+  }
+  
+  #respond {
+	position: relative;
+  }
+  
+  #respond .comment-user-avatar {
+	margin: 1rem 0 -1rem;
+  }
+  
+  #respond .comment .comment-form {
+	padding-left: 0;
+  }
+  
+  #respond > small {
+	display: block;
+	font-size: 22px;
+	position: absolute;
+
+
+
+
+	left: calc(1rem + 100%);
+	top: calc(-3.5 * 1rem);
+	width: calc(100vw / 12);
+  }
+  
+  #comments > .comments-title:last-child {
+	display: none;
+  }
+  
+  .comment-form-flex {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .comment-form-flex .comments-title {
+	display: none;
+	margin: 0;
+	order: 1;
+  }
+  
+  .comment-form-flex #respond {
+	order: 2;
+  }
+  
+  .comment-form-flex #respond + .comments-title {
+	display: block;
+  }
+  
+  .comment-list {
+	list-style: none;
+	padding: 0;
+  }
+  
+  .comment-list .children {
+	margin: 0;
+	padding: 0 0 0 1rem;
+  }
+  
+  .comment-list > .comment:first-child {
+	margin-top: 0;
+  }
+  
+  .comment-list .pingback .comment-body,
+  .comment-list .trackback .comment-body {
+	color: #767676;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 0.71111em;
+	font-weight: 500;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+  }
+  
+  .comment-list .pingback .comment-body a:not(.comment-edit-link),
+  .comment-list .trackback .comment-body a:not(.comment-edit-link) {
+	font-weight: bold;
+	font-size: 19.55556px;
+	line-height: 1.5;
+	padding-right: 0.5rem;
+	display: block;
+  }
+  
+  .comment-list .pingback .comment-body .comment-edit-link,
+  .comment-list .trackback .comment-body .comment-edit-link {
+	color: #767676;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-weight: 500;
+  }
+  
+  #respond + .comment-reply {
+	display: none;
+  }
+  
+  .comment-reply .comment-reply-link {
+	display: inline-block;
+  }
+  
+  .comment {
+	list-style: none;
+	position: relative;
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comment {
+	  padding-left: calc(.5 * (1rem + calc(100vw / 12 )));
+	}
+	.comment.depth-1,
+	.comment .children {
+	  padding-left: 0;
+	}
+	.comment.depth-1 {
+	  margin-left: calc(3.25 * 1rem);
+	}
+  }
+  
+  .comment .comment-body {
+	margin: calc(2 * 1rem) 0 0;
+  }
+  
+  .comment .comment-meta {
+	position: relative;
+  }
+  
+  .comment .comment-author .avatar {
+	float: left;
+	margin-right: 1rem;
+	position: relative;
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comment .comment-author .avatar {
+	  float: inherit;
+	  margin-right: inherit;
+	  position: absolute;
+	  top: 0;
+	  right: calc(100% + 1rem);
+	}
+  }
+  
+  .comment .comment-author .fn {
+	position: relative;
+	display: block;
+  }
+  
+  .comment .comment-author .fn a {
+	color: inherit;
+  }
+  
+  .comment .comment-author .fn a:hover {
+	color: #005177;
+  }
+  
+  .comment .comment-author .post-author-badge {
+	border-radius: 100%;
+	display: block;
+	height: 18px;
+	position: absolute;
+	background: #008fd3;
+	right: calc(100% - 2.5rem);
+	top: -3px;
+	width: 18px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comment .comment-author .post-author-badge {
+	  right: calc(100% + 0.75rem);
+	}
+  }
+  
+  .comment .comment-author .post-author-badge svg {
+	width: inherit;
+	height: inherit;
+	display: block;
+	fill: white;
+	transform: scale(0.875);
+  }
+  
+  .comment .comment-metadata > a,
+  .comment .comment-metadata .comment-edit-link {
+	display: inline;
+	font-weight: 500;
+	color: #767676;
+	vertical-align: baseline;
+  }
+  
+  .comment .comment-metadata > a time,
+  .comment .comment-metadata .comment-edit-link time {
+	vertical-align: baseline;
+  }
+  
+  .comment .comment-metadata > a:hover,
+  .comment .comment-metadata .comment-edit-link:hover {
+	color: #005177;
+	text-decoration: none;
+  }
+  
+  .comment .comment-metadata > * {
+	display: inline-block;
+  }
+  
+  .comment .comment-metadata .edit-link-sep {
+	color: #767676;
+	margin: 0 0.2em;
+	vertical-align: baseline;
+  }
+  
+  .comment .comment-metadata .edit-link {
+	color: #767676;
+  }
+  
+  .comment .comment-metadata .edit-link svg {
+	transform: scale(0.8);
+	vertical-align: baseline;
+	margin-right: 0.1em;
+  }
+  
+  .comment .comment-metadata .comment-edit-link {
+	position: relative;
+	padding-left: 1rem;
+	margin-left: -1rem;
+	z-index: 1;
+  }
+  
+  .comment .comment-metadata .comment-edit-link:hover {
+	color: #0073aa;
+  }
+  
+  .comment .comment-content {
+	margin: 1rem 0;
+  }
+  
+  @media only screen and (min-width: 1168px) {
+	.comment .comment-content {
+	  padding-right: 1rem;
+	}
+  }
+  
+  .comment .comment-content > *:first-child {
+	margin-top: 0;
+  }
+  
+  .comment .comment-content > *:last-child {
+	margin-bottom: 0;
+  }
+  
+  .comment .comment-content blockquote {
+	margin-left: 0;
+  }
+  
+  .comment .comment-content a {
+	text-decoration: underline;
+  }
+  
+  .comment .comment-content a:hover {
+	text-decoration: none;
+  }
+  
+  .comment-reply-link,
+  #cancel-comment-reply-link {
+	font-weight: 500;
+  }
+  
+  .comment-reply-link:hover,
+  #cancel-comment-reply-link:hover {
+	color: #005177;
+  }
+  
+  .discussion-avatar-list {
+	content: "";
+	display: table;
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .discussion-avatar-list li {
+	position: relative;
+	list-style: none;
+	margin: 0 -8px 0 0;
+	padding: 0;
+	float: left;
+  }
+  
+  .discussion-avatar-list .comment-user-avatar img {
+	height: calc(1.5 * 1rem);
+	width: calc(1.5 * 1rem);
+  }
+  
+  .discussion-meta .discussion-meta-info {
+	margin: 0;
+  }
+  
+  .discussion-meta .discussion-meta-info .svg-icon {
+	vertical-align: middle;
+	fill: currentColor;
+	transform: scale(0.6) scaleX(-1) translateY(-0.1em);
+	margin-left: -0.25rem;
+  }
+  
+  .comment-form .comment-notes,
+  .comment-form label {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 0.71111em;
+	color: #767676;
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comment-form .comment-form-author,
+	.comment-form .comment-form-email {
+	  width: calc(50% - 0.5rem);
+	  float: left;
+	}
+  }
+  
+  @media only screen and (min-width: 768px) {
+	.comment-form .comment-form-email {
+	  margin-left: 1rem;
+	}
+  }
+  
+  .comment-form input[name="author"],
+  .comment-form input[name="email"],
+  .comment-form input[name="url"] {
+	display: block;
+	width: 90%;
+	background: white;
+
+  }
 
 /*--------------------------------------------------------------
 # Infinite scroll

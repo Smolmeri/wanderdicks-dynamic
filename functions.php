@@ -161,3 +161,27 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function wpsites_customize_comment_form_text_area($arg) {
+    $arg['comment_field'] = '<p class="comment-form-comment"><textarea id="comment" name="comment" placeholder="Comment..."cols="45" rows="5" aria-required="true"></textarea></p>';
+    return $arg;
+}
+
+add_filter('comment_form_defaults', 'wpsites_customize_comment_form_text_area');
+
+// change comment form fields order
+add_filter( 'comment_form_fields', 'mo_comment_fields_custom_order' );
+function mo_comment_fields_custom_order( $fields ) {
+	$comment_field = $fields['comment'];
+	$author_field = $fields['author'];
+	$email_field = $fields['email'];
+	unset( $fields['comment'] );
+	unset( $fields['author'] );
+	unset( $fields['email'] );
+	unset( $fields['url'] );
+	// the order of fields is the order below, change it as needed:
+	$fields['comment'] = $comment_field;
+	$fields['author'] = $author_field;
+	$fields['email'] = $email_field;
+	// done ordering, now return the fields:
+	return $fields;
+}

@@ -16,25 +16,6 @@ const onNavPress = () => {
     hide.classList.toggle('hide');
 }
 
-const smoothScroll = () => {
-    const id = document.getElementsByClassName('scrollHere')[0];
-    console.log('what is ID', id)
-    id.scrollIntoView({ behavior: 'smooth' });
-}
-
-const smoothScrollMobile = () => {
-    const id = document.getElementsByClassName('scrollHereMobile')[0];
-    console.log('what is ID', id)
-    id.scrollIntoView({ behavior: 'smooth' });
-}
-
-const smoothScrollUp = () => {
-    const id = document.getElementsByClassName('scrollUp')[0];
-    console.log('what is ID', id)
-    id.scrollIntoView({ behavior: 'smooth' });
-}
-
-
 let count = 0;
 const easterEggCounter = document.getElementById("easterEgg");
 const newText = document.querySelector('.newText');

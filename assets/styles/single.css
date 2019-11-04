@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    margin: 10px 20%;
+    margin: 0 20%;
 }
 
 .info-container {
@@ -41,6 +41,41 @@
     flex-flow: column;
     justify-content: space-between;
     margin: 10px;
+}
+
+#comments {
+    font-family: 'Roboto Slab', serif;
+    padding: 0 20px;
+}
+
+/* #comments {
+     font-family: 'Roboto', sans-serif;
+} */
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+input {
+    border: 1px black solid;
+    padding: 10px 10px;
+    background: transparent;
+    font-size: 1.2em;
+    font-weight: 400;
+    width: 130px;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-self: flex-end;
+    cursor: pointer;
+}
+
+.fn {
+    opacity: .7;
 }
 
 @media only screen and (max-width: 820px) {

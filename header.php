@@ -24,24 +24,6 @@ $white_logo = get_field('white_logo');
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-N8JCHSC');
-    </script>
-    <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/index.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/single.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/styles/mission.css">
@@ -50,17 +32,22 @@ $white_logo = get_field('white_logo');
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151168695-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-151168695-1');
+        ga('create', 'UA-151168695-1', 'auto');
+        ga('send', 'pageview');
+        ga('send', 'event');
     </script>
 
 </head>
@@ -82,20 +69,20 @@ $white_logo = get_field('white_logo');
         <div class="nav-list">
             <a href="home"><img style="width: 225px; height: 200px;" src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/wanderdicks_white.png"></a>
             <ul>
-                <a href="home" onclick=ga(‘send’, ‘event’, [NavigationMenu], [Clicked], [HomePage]);>
+                <a href="home" onclick="ga('send', 'event' , 'NavigationMenu' , 'Clicked' , 'HomePage' );">
                     <li>Home</li>
                 </a>
-                <a href="projects" onclick=ga(‘send’, ‘event’, [NavigationMenu], [Clicked], [ProjectsPage]);>
+                <a href="projects" onclick="ga('send', 'event' , 'NavigationMenu' , 'Clicked' , 'ProjectsPage' );">
                     <li>Projects</li>
                 </a>
-                <a href="blog"  onclick=ga(‘send’, ‘event’, [NavigationMenu], [Clicked], [BlogPage]);>
+                <a href="blog" onclick="ga('send', 'event' , 'NavigationMenu' , 'Clicked' , 'BlogPage' );">
                     <li>Stories</li>
                 </a>
-                <a href="team"  onclick=ga(‘send’, ‘event’, [NavigationMenu], [Clicked], [TeamPage]);>
+                <a href="team" onclick="ga('send', 'event' , 'NavigationMenu' , 'Clicked' , 'TeamPage' );">
                     <li>Meet the Team</li>
                 </a>
 
-                <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi"  onclick=ga(‘send’, ‘event’, [Icons], [Clicked], [Instagram]);>
+                <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi" onclick="ga('send', 'event' , 'Icons' , 'Clicked' , 'Instagram' );">
                     <li>
                         <i class="fab fa-instagram fa-3x"></i>
                     </li>

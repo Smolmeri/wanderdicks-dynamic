@@ -24,23 +24,23 @@
     </div>
 
     <div class="instagram">
-        <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi" onclick=ga(‘send’, ‘event’, [Icons], [Clicked], [Instagram]);><i class="fab fa-instagram fa-5x"></i></a>
+        <a target="_blank" href="https://www.instagram.com/wanderdicks/?hl=fi" onclick="ga('send', 'event', 'Icons', 'Clicked', 'Instagram');"><i class="fab fa-instagram fa-5x"></i></a>
     </div>
 
 
     <!-- <div class="column-2"> -->
         <div class="footer-nav-list">
             <ul>
-            <a href="home" onclick=ga(‘send’, ‘event’, [NavigationMenu], [Clicked], [HomePage]);>
+            <a href="home" onclick="ga('send', 'event', 'NavigationMenu', 'Clicked', 'HomePage');">
                     <li>Home</li>
                 </a>
-                <a href="projects" onclick=ga(‘send’, ‘event’, [FooterMenu], [Clicked], [ProjectsPage]);>
+                <a href="projects" onclick="ga('send', 'event', 'FooterMenu', 'Clicked', 'ProjectsPage');">
                     <li>Projects</li>
                 </a>
-                <a href="blog"  onclick=ga(‘send’, ‘event’, [FooterMenu], [Clicked], [BlogPage]);>
+                <a href="blog"  onclick="ga('send', 'event', 'FooterMenu', 'Clicked', 'BlogPage');">
                     <li>Stories</li>
                 </a>
-                <a href="team"  onclick=ga(‘send’, ‘event’, [FooterMenu], [Clicked], [TeamPage]);>
+                <a href="team"  onclick="ga('send', 'event', 'FooterMenu', 'Clicked', 'TeamPage');">
                     <li>Meet the Team</li>
                 </a>
             </ul>
@@ -56,8 +56,12 @@
 
 
 <script src="<?php bloginfo('template_directory'); ?>/assets/js/index.js"></script>
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch&flags=gated"></script>
-
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+	const scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 500
+});
+</script>
 </body>
 
 </html>
