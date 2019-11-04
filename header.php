@@ -20,7 +20,13 @@ $white_logo = get_field('white_logo');
 <html class="html" <?php language_attributes();  ?>>
 
 <head>
-
+    <meta name="description" content="A pack of friends seeking adventures, peace of mind and sustainability from the near and faraway nature.">
+    <meta name="keywords" content="wanderdicks, retkeily, luonnonsuojelu, hiking, friends, blog, nature blog, hiking blog, camping blog, retkeily blogi, vaellus blogi, luonto blogi, trees, planting, exploration, vaellus, trecking, camping, nature, luonto, sustainability, accessability, finland, helsinki, vaasa, lapland, tuomas paavolainen, tom paavolainen, smolmeri , pekka vartiainen, ">
+    <meta name="author" content="Wanderdicks Oy">
+    <meta property="og:url" content="www.wanderdicks.org">
+    <meta property="og:title" content="Wanderdicks">
+    <meta property="og:description" content="A pack of friends seeking adventures, peace of mind and sustainability from the near and faraway nature.">
+    <meta property="og:image" content="<?php echo get_bloginfo('template_directory'); ?>/assets/img/wanderdicks_black.png">
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
