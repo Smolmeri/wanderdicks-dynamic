@@ -7,7 +7,7 @@
     z-index: 1;
     margin: 10px;
     padding: 10px;
-    z-index: 9999999;
+    z-index: 99999999;
 }
 
 .bar1, .bar2, .bar3 {
