@@ -17,7 +17,6 @@ get_header();
     <div class="team-hero-image" style="background-image: url(<?php echo $main_image[url] ?>)"></div>
     <h1 class="big-header" style="color: black; white-space: nowrap;"><?php echo $main_header ?></h1>
     <div class="team-hero-container">
-        
         <p><?php echo $team_body; ?></p>
     </div>
 
