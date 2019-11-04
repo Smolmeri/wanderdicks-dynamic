@@ -17,11 +17,9 @@
 .team-hero-container {
     display: flex;
     flex-flow: column wrap;
-    /* margin: 100px 0; */
-    /* height: 50vh; */
+    margin: 0 10%;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0 20%;
     margin-bottom: 100px;
 }
 
