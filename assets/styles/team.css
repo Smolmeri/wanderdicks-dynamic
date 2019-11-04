@@ -39,6 +39,7 @@
     flex-flow: row wrap;
     justify-content: center;
     height: 100%;
+    margin-bottom: 100px;
 }
 
 .card {

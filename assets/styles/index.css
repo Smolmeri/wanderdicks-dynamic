@@ -7,7 +7,7 @@
     z-index: 1;
     margin: 10px;
     padding: 10px;
-    z-index: 999;
+    z-index: 9999999;
 }
 
 .bar1, .bar2, .bar3 {
@@ -58,7 +58,7 @@
     left: -118px;
     top: -106px;
     opacity: .8;
-    z-index: 10;
+    z-index: 9999999;
 }
 
 .nav-list {
