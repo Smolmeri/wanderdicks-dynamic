@@ -73,6 +73,7 @@
     justify-content: center;
     visibility: hidden;
     left: -250px;
+    z-index: 9999999;
 }
 
 .nav-list img {
