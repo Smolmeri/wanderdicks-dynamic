@@ -39,11 +39,12 @@ get_header();
 
 <section class="scrollHere" id="info"> 
     <div class="mission-info-container">
-        <div class="icons">
+        <!-- <div class="icons">
             <i class="fas fa-tree fa-5x"></i>
             <i class="fas fa-tree fa-9x"></i>
             <i class="fas fa-tree fa-5x"></i>
-        </div>
+        </div> -->
+        <div class="trees" style="background-image: url(<?php echo bloginfo('template_directory'); ?>/assets/img/trees.png); "></div>
         <p class="small-header centered-p"><?php echo $mission_statement ?></p>
     </div>
 </section>
