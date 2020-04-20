@@ -38,8 +38,8 @@ get_header();
             </a>
         <?php endwhile; ?>
         <nav>
-            <?php previous_posts_link('&laquo; Newer') ?>
-            <?php next_posts_link('Older &raquo;') ?>
+            <?php previous_posts_link('&laquo; Previous') ?>
+            <?php next_posts_link('&raquo; Next') ?>
         </nav>
     </div>
 </div>
