@@ -15,7 +15,7 @@ get_header();
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $loop = new WP_Query(array(
                 'paged' => $paged,
-                'posts_per_page' => 4, 
+                'posts_per_page' => 8, 
                 'post_type' => 'blog_posts', 
                 'orderby' => 'post_id', 
                 'order' => 'DESC'
