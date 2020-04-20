@@ -1,5 +1,10 @@
 <?php
 
+// REMOVED BANK DETAILS FOR LEGAL REASONS.
+// LEFT IN COMMENTS IN CASE OF FUTURE NEEDS.
+// Tom Paavolainen
+
+
 // Custom Fields
 
 $main_image = get_field('main_image');
